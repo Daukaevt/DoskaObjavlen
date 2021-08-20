@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="@string/ad">
+        <menu>
+            <item
+                android:title="@string/ad_my_ads"
+                android:id="@+id/id_myAds" />
+            <item
+                android:title="@string/ad_car"
+                android:id="@+id/id_car" />
+            <item
+                android:title="@string/ad_pc"
+                android:id="@+id/id_pc" />
+            <item
+                android:title="@string/ad_smartphone"
+                android:id="@+id/id_smart" />
+            <item
+                android:title="@string/ad_dm"
+                android:id="@+id/id_dm" />
+        </menu>
+    </item>
+    <item android:title="@string/ad_log">
+        <menu>
+            <item
+                android:title="@string/ad_signUp"
+                android:id="@+id/id_signUp" />
+            <item
+                android:title="@string/ad_signIn"
+                android:id="@+id/id_signIn" />
+            <item
+                android:title="@string/ad_signOut"
+                android:id="@+id/id_signOut" />
+         </menu>
+    </item>
+
+</menu>
