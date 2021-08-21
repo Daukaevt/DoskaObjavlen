@@ -13,5 +13,10 @@
     <string name="ad_signOut">Выход</string>
     <string name="open">Открыт</string>
     <string name="closed">Закрыт</string>
+    <!-- Sign Dialog-->
+    <string name="di_email">Email</string>
+    <string name="di_password">Пароль</string>
+    <string name="di_reg">Зарегистрироваться</string>
+    <string name="di_forgot">Забыли пароль?</string>
 
 </resources>

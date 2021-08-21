@@ -2,29 +2,36 @@ package com.wixsite.mupbam1.resume.doskaobjavleniy
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.my_content.*
+import com.wixsite.mupbam1.resume.doskaobjavleniy.databinding.ActivityMainBinding
+import com.wixsite.mupbam1.resume.doskaobjavleniy.dialogHelper.DialogHelper
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    lateinit var binding: ActivityMainBinding
+    val dialogHelper = DialogHelper(this)
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         init()
     }
 
-    private fun init() {
-        val toggle = ActionBarDrawerToggle(
-            this, dlMenu, toolbar,
-            R.string.open, R.string.closed
-        )
-        dlMenu.addDrawerListener(toggle)
-        toggle.syncState()
-        nvNav.setNavigationItemSelectedListener(this)
+    private fun init()  {
+
+            val toggle = ActionBarDrawerToggle(
+                this, binding.dlMenu, binding.lMyContent.toolbar,
+                R.string.open, R.string.closed
+            )
+            binding.dlMenu.addDrawerListener(toggle)
+            toggle.syncState()
+            binding.nvNav.setNavigationItemSelectedListener(this)
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -45,7 +52,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "id_dm", Toast.LENGTH_LONG).show()
             }
             R.id.id_signUp -> {
-                Toast.makeText(this, "id_signUp", Toast.LENGTH_LONG).show()
+                dialogHelper.createSignDialog()
             }
             R.id.id_signIn -> {
                 Toast.makeText(this, "id_signIn", Toast.LENGTH_LONG).show()
@@ -54,7 +61,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "id_signOut", Toast.LENGTH_LONG).show()
             }
         }
-        dlMenu.closeDrawer(GravityCompat.START)
+        binding.dlMenu.closeDrawer(GravityCompat.START)
         return true
     }
 }
