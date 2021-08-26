@@ -13,10 +13,16 @@
     <string name="ad_signOut">Выход</string>
     <string name="open">Открыт</string>
     <string name="closed">Закрыт</string>
+    <string name="ad_notReg">Войти или зарегистрироваться.</string>
     <!-- Sign Dialog-->
     <string name="di_email">Email</string>
     <string name="di_password">Пароль</string>
     <string name="di_reg">Зарегистрироваться</string>
+    <string name="di_signIn">Войти</string>
     <string name="di_forgot">Забыли пароль?</string>
+    <string name="di_regUnSuccessfull">Регистрация не завершена</string>
+    <string name="di_regUnVerification">Не удалось отправить письмо на указанный Вами адресс электронной почты</string>
+    <string name="di_regVerification">На указанный почтовый ящик придет письмо,
+        содержащее ссылку для подтверждения адреса. Пожалуйста, подтвердите Ваш адресс электронной почты.</string>
 
 </resources>

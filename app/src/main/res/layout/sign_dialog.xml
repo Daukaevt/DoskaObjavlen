@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tvSignEmail"
+        android:id="@+id/edSignEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -42,9 +42,9 @@
         android:hint="@string/di_password"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvSignEmail"
-        app:layout_constraintStart_toStartOf="@+id/tvSignEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edSignEmail"
+        app:layout_constraintStart_toStartOf="@+id/edSignEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edSignEmail"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -52,10 +52,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/di_reg"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/edPassword"
         app:layout_constraintStart_toStartOf="@+id/edPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btForgot"
@@ -64,7 +67,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/di_forgot"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/tvSignEmail"
-        app:layout_constraintStart_toStartOf="@+id/tvSignEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edSignEmail"
+        app:layout_constraintStart_toStartOf="@+id/edSignEmail"
         app:layout_constraintTop_toBottomOf="@+id/btSignUp_In" />
 </androidx.constraintlayout.widget.ConstraintLayout>
